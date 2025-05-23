@@ -16,6 +16,16 @@ public class ServidorPublico {
     private String lotacao;
     private String email;
 
+    private double salarioFinal;
+
+    public double getSalarioFinal() {
+        return salarioFinal;
+    }
+
+    public void setSalarioFinal(double salarioFinal) {
+        this.salarioFinal = salarioFinal;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -126,5 +136,11 @@ public class ServidorPublico {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public double calcularSalarioExtra(double horasTrabalhadas, double valorHora){
+        double salarioMensal = salario + (horasTrabalhadas*valorHora);
+        salarioFinal = salarioMensal;
+        return (salarioFinal);
     }
 }

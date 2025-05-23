@@ -10,8 +10,10 @@ public class Programa {
         isabela.setOrgao("ANVISA");
         isabela.setLotacao("Brasilia");
         isabela.setEmail("isabela@gmail.");
+        isabela.calcularSalarioExtra(10, 5.60);
 
         System.out.println("Servidor: "+ isabela.getNome());
+        System.out.printf("Salario mensal: RS %.2f ",isabela.getSalarioFinal());
 
     }
 }
